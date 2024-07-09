@@ -1,10 +1,9 @@
-import ArtPiecePreview from "../ArtPiecePreview";
-
+import ArtpiecePreview from "@/components/ArtpiecePreview";
 export default function ArtPieces({ pieces }) {
   return (
     <ul>
       {pieces.map((piece) => (
-        <ArtPiecePreview key={piece.slug} piece={piece} />
+        <ArtpiecePreview key={piece.slug} piece={piece} />
       ))}
     </ul>
   );
