@@ -16,7 +16,7 @@ const StyledTitle = styled.h2`
   font-size: 1.2rem;
 `;
 
-export default function ArtPiecePreview({ piece }) {
+export default function ArtpiecePreview({ piece }) {
   const { imageSource: image, artist: artist, name: title } = piece;
   return (
     <StyledContainer>
