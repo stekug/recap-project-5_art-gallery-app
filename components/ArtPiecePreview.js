@@ -17,7 +17,7 @@ const StyledTitle = styled.h2`
   font-size: 1.2rem;
 `;
 
-export default function ArtPiecePreview({ piece, onShowDetail }) {
+export default function ArtPiecePreview({ piece }) {
   const { imageSource: image, artist, name: title, slug } = piece;
 
   return (
@@ -29,7 +29,6 @@ export default function ArtPiecePreview({ piece, onShowDetail }) {
           height={0}
           style={{ width: "auto", height: "auto" }}
           alt={title}
-          onClick={onShowDetail}
         />
       </Link>
       <StyledTitle>
