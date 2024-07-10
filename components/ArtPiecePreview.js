@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link";
 
 const StyledContainer = styled.li`
   display: flex;
@@ -16,17 +17,21 @@ const StyledTitle = styled.h2`
   font-size: 1.2rem;
 `;
 
-export default function ArtpiecePreview({ piece }) {
-  const { imageSource: image, artist: artist, name: title } = piece;
+export default function ArtPiecePreview({ piece, onShowDetail }) {
+  const { imageSource: image, artist, name: title, slug } = piece;
+
   return (
     <StyledContainer>
-      <Image
-        src={image}
-        width={360}
-        height={0}
-        style={{ width: "auto", height: "auto" }}
-        alt={title}
-      />
+      <Link href={`/art-pieces/${slug}`}>
+        <Image
+          src={image}
+          width={360}
+          height={0}
+          style={{ width: "auto", height: "auto" }}
+          alt={title}
+          onClick={onShowDetail}
+        />
+      </Link>
       <StyledTitle>
         "{title}" - <StyledSpan>{artist}</StyledSpan>
       </StyledTitle>
