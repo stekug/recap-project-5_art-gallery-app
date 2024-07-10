@@ -1,9 +1,13 @@
-import ArtpiecePreview from "@/components/ArtpiecePreview";
-export default function ArtPieces({ pieces }) {
+import ArtPiecePreview from "@/components/ArtPiecePreview";
+export default function ArtPieces({ pieces, onShowDetail }) {
   return (
     <ul>
       {pieces.map((piece) => (
-        <ArtpiecePreview key={piece.slug} piece={piece} />
+        <ArtPiecePreview
+          key={piece.slug}
+          piece={piece}
+          onShowDetail={() => onShowDetail(piece.slug)}
+        />
       ))}
     </ul>
   );

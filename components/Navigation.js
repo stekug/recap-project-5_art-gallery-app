@@ -10,7 +10,6 @@ const StyledNav = styled.nav`
 const StyledList = styled.ul`
   display: flex;
   justify-content: center;
-  /* gap: 1rem; */
 `;
 
 const StyledLI = styled.li`
@@ -22,7 +21,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   width: inherit;
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   background-color: #e8479b;
   color: white;
   font-size: 1.4rem;

@@ -7,6 +7,11 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root {
+    --primary-color: #e8479b;
+    --secondary-color: #17f1b3;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -23,4 +28,6 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  
 `;
